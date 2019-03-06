@@ -1,0 +1,16 @@
+/*
+Akash Bhargava
+18210613
+akash.bhargava2@mail.dcu.ie
+*/
+
+Create database pig;
+
+Create table stackposts (Id int, PostTypeId int, Score int, ViewCount int, OwnerUserId int, OwnerDisplayName string, Title string);
+
+SELECT id,score,title FROM stackposts SORT BY score desc limit 10;
+
+SELECT Score, OwnerUserId, OwnerDisplayName  FROM stackposts SORT BY Score DESC LIMIT 10;
+
+SELECT Count(DISTINCT(OwnerUserId)) FROM stackposts WHERE (Body REGEXP 'hadoop') OR (Title REGEXP 'hadoop');
+SELECT DISTINCT(OwnerUserId)) FROM stackposts WHERE Title REGEXP 'hadoop';
